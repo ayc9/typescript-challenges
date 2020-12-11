@@ -6,7 +6,7 @@
 *
 * Goal: Make sure that `johnDoe` can build his impressive resume. Do not use classes.
 * 
-* Hint: https://www.typescriptlang.org/docs/handbook/advanced-types.html#intersection-types
+* Hint: https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#intersection-types
 */
 
 interface Singer {
@@ -21,9 +21,21 @@ interface Teacher {
     teach(): string;
 }
 
-type SkilledPerson = Singer;
+type SkilledPerson = Singer & Teacher & Dancer;
 
-const johnDoe: SkilledPerson = {}
+const johnDoe: SkilledPerson = {
+    sing() {
+        return "I can sing!";
+    },
+
+    teach() {
+        return "I can teach!";
+    },
+
+    dance() {
+        return "I can dance!";
+    },
+};
 
 function buildResume(person: SkilledPerson) {
     const skills = [

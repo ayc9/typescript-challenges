@@ -6,7 +6,7 @@
 *
 * Goal: Make sure that `configureScreenSize` function can accept both types of parameters.
 * 
-* Hint: https://www.typescriptlang.org/docs/handbook/advanced-types.html#union-types
+* Hint: https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html#union-types
 */
 
 const iAmANumber = 800
